@@ -1,24 +1,24 @@
 #include<iostream> // com essa biblioteca da para usar os comandos system.
-#include<stdio.h> // biblioteca padr„o.
-#include<locale.h> // biblioteca pra incrementar as acentuaÁıes do portugues.
+#include<stdio.h> // biblioteca padr√£o.
+#include<locale.h> // biblioteca pra incrementar as acentua√ß√µes do portugues.
 
 
 
 
-void menu(); // comando void e usado para guardar uma cadeia de comandos que ser· usado somante quando for chamdos.
+void menu(); // comando void e usado para guardar uma cadeia de comandos que ser√° usado somante quando for chamdos.
 			// os comandos void devem ficar fora do int main().
 			
 float x,y,r; // variaveis para receber os vaores (x,y) e um para armazenar o resultado(r).
 int opc,retorno = -1; // variavel paar fazer a escolha do usuario (opc).
-				     // o retorno uma variavel para impedir bugs ou possiveis aÁıes invalidas pelo usuario.
+				     // o retorno uma variavel para impedir bugs ou possiveis a√ß√µes invalidas pelo usuario.
 char letra; // variavel responsavel pra armazenar codigos invalidos do usuario.
 
 
 void erro(); // void para quando o usuario digitar uma letra ou qualquer caractere diferente de um numero.
 
-void inst(); //void das instruÁoes.
+void inst(); //void das instru√ßoes.
 
-void mu(); //void da multiplicaÁao.
+void mu(); //void da multiplica√ßao.
 	
 void di(); // void da divisao.
 
@@ -26,11 +26,11 @@ void c(); // void dos creditos.
 
 void re();
 
-void su(); // void da subtraÁ„o.
+void su(); // void da subtra√ß√£o.
 
-void ad(); //void da adiÁ„o.
+void ad(); //void da adi√ß√£o.
 	
-void regras(); //void das regras/instruÁıes.
+void regras(); //void das regras/instru√ß√µes.
 
     int main(){ // inicio do do programa.
 		setlocale(LC_ALL, "Portuguese");
@@ -47,19 +47,19 @@ printf("\n\n=====VALOR INVALIDO=====\n\n|TENTE ULTILIZAR NUMEROS|\n(1 2 3  ... 8
  
  void inst()
 {
-printf("\n======================================\n| DIGITE ( 0 ) PARA RETORNA AO MENU |\n|   DIGITE OS NUMEROS DA OPER«√O:   |\n======================================\n\n");	
+printf("\n======================================\n| DIGITE ( 0 ) PARA RETORNA AO MENU |\n|   DIGITE OS NUMEROS DA OPER√á√ÉO:   |\n======================================\n\n");	
 }
  
  void mu()
 {
 	
 	
-	do // comeÁo da repetiÁ„o para limpar codigo invalido.
+	do // come√ßo da repeti√ß√£o para limpar codigo invalido.
 	{
 	inst();
-	retorno = scanf("%f", &x); // o scanf vai receber o retorno, quando um numero e digitado o retorno È igual a 1, quando algo que nao seja.
+	retorno = scanf("%f", &x); // o scanf vai receber o retorno, quando um numero e digitado o retorno √© igual a 1, quando algo que nao seja.
 	                          // um numero for digitado o retorno sera zero, ja que nenhum numero foi armazenado.
-		do // assim entramos em uma repetiÁao.
+		do // assim entramos em uma repeti√ßao.
 		{
 			letra = getchar();   //getchat() ler os caracteres digitado no buffer do teclado, e ira apagar esse caractere, que sera guardado na variavel letra.
 		} while(letra != '\n'); //que por sua vez sera repetido ate letra ser diferente ou igual a \n que e a tecla enter, que sempre sera a ultima tecla no buffer do teclado.
@@ -70,18 +70,18 @@ printf("\n======================================\n| DIGITE ( 0 ) PARA RETORNA AO
 		scanf("%d", &opc);
 		system("cls");
 		}
-	} while(retorno == 0); //fina da repetiÁao
+	} while(retorno == 0); //fina da repeti√ßao
 	if(x == 0) // se o x for igual a zero o void menu(); sera chamado.
 	{
 		system("cls");
 		menu();
 	
 	}
-	else // se nao for, fara a operaÁ„o.
+	else // se nao for, fara a opera√ß√£o.
 	{
 		printf("x\n");
 	    scanf("%f", &y);
-	do	// onde teremos a mesma repetiÁao para codigos invalidos.
+	do	// onde teremos a mesma repeti√ßao para codigos invalidos.
 	{
 		do
 		{
@@ -90,7 +90,7 @@ printf("\n======================================\n| DIGITE ( 0 ) PARA RETORNA AO
 
 	} while(retorno == 0);
 	    r = (x * y);
-	    printf("\n\nO valor È: %.2f\n\n", r);
+	    printf("\n\nO valor √©: %.2f\n\n", r);
 	    system("pause");
 	    system("cls");
 	    mu();
@@ -127,7 +127,7 @@ printf("\n======================================\n| DIGITE ( 0 ) PARA RETORNA AO
 		scanf("%f", &y);
 		if(y == 0) // se o denominador for 0 ira mostrar uma mensagem de erro.
 		{
-			printf("         CODIGO INVALIDO\nO DENOMINADOR N√O PODE SER ZERO (0)\n\n");
+			printf("         CODIGO INVALIDO\nO DENOMINADOR N√ÉO PODE SER ZERO (0)\n\n");
 			system("pause");
 			system("cls");
 			di();
@@ -140,7 +140,7 @@ printf("\n======================================\n| DIGITE ( 0 ) PARA RETORNA AO
 			}while(letra != '\n');
 		}while(retorno == 0);
 		r = (x / y);
-		printf("\n\nO valor È: %.2f\n\n", r);
+		printf("\n\nO valor √©: %.2f\n\n", r);
 	    system("pause");
 	    system("cls");
 	    di();
@@ -151,7 +151,7 @@ printf("\n======================================\n| DIGITE ( 0 ) PARA RETORNA AO
  void re()
 {
 	printf("SISTEMA DE ADMINISTRADOR!\n\n");
-	printf("INFORMA«’ES SOBRE O RETORNO\n");
+	printf("INFORMA√á√ïES SOBRE O RETORNO\n");
 	printf("DIGITE UMA LETRA OU NUMERO\n>>");
 		int x, admre;
 		admre = scanf("%d", &x);
@@ -164,13 +164,13 @@ printf("\n======================================\n| DIGITE ( 0 ) PARA RETORNA AO
 		}while(letra != '\n');
 		printf("\n\nvalor do retorno (%d) \n", admre);
 		printf("\nnumero digiado (%d) \n", x);
-	    printf("\nquando retorno È menos um (-1), significa que foi digitado uma letra\n\n");
+	    printf("\nquando retorno √© menos um (-1), significa que foi digitado uma letra\n\n");
 	    printf("\nquandoo retorno for um (1), significa que foi digiado um numero\n\n");
 	    printf("isso ocorreu dessa maneira\n\n\n");
 	    system("pause");
 	    system("cls");
 	    printf("	int x, admre; \n\n\n		admre = scanf(%% d, &x);\\n\n\n		do\n\n\n		{\n\n\n			letra = getchar();\n\n\n		}while(letra != '\\N');\n\n\n");
-		printf("A VARIAVE LETRA VAI RECEBER getchar(); QUE VAI APAGAR\nOS CARACTERES DIGIADO NO TECLADO\nONDE ISSO VAI SE REPETIR ATE O ⁄LTIMO CARACTERE SER A TECLA ENTER OU (\\N)\n\n\n");
+		printf("A VARIAVE LETRA VAI RECEBER getchar(); QUE VAI APAGAR\nOS CARACTERES DIGIADO NO TECLADO\nONDE ISSO VAI SE REPETIR ATE O √öLTIMO CARACTERE SER A TECLA ENTER OU (\\N)\n\n\n");
 		system("pause");
 		system("cls");
 
@@ -199,7 +199,7 @@ printf("\n======================================\n| DIGITE ( 0 ) PARA RETORNA AO
     printf("                   | PROGRAMA FEITO POR |\n\n ");
     printf("                  |  @joao_pedroxbr    |\n");
     printf("                   ======================\n\n\n\n\n");
-    printf(" 25/03/2023 - vers„o: 1.0 \n\n");
+    printf(" 25/03/2023 - vers√£o: 1.0 \n\n");
     printf("Digite 0 pra voltar\n>> ");
     scanf("%f", &x);
     if(x == 2214) {
@@ -238,7 +238,7 @@ do{
         printf("-\n");
         scanf("%f", &y);
         r = (x - y);
-        printf("\n\nO valor È: %.2f\n\n", r);
+        printf("\n\nO valor √©: %.2f\n\n", r);
         system("pause");
         system("cls");
         su();
@@ -251,14 +251,14 @@ do{
 		printf("======================================================================\n");
 	printf("                       - COMO USAR A CALCULADORA -\n");
 	printf("======================================================================\n");
-	printf("\n ESSE PROGRAMA TEM A CAPACIDADE DE EFETUAR AS 4 OPERA«OES PRICIPAIS \n");
-	printf(" COMO A ADI«√O (+) SUBTRA«√O (-) DIVIS√O (/) E A MULTIPLICA«√O (*)\n\n");
+	printf("\n ESSE PROGRAMA TEM A CAPACIDADE DE EFETUAR AS 4 OPERA√áOES PRICIPAIS \n");
+	printf(" COMO A ADI√á√ÉO (+) SUBTRA√á√ÉO (-) DIVIS√ÉO (/) E A MULTIPLICA√á√ÉO (*)\n\n");
 	printf("----------------------------------------------------------------------\n\n");
-	printf(" A CALCULADORA S” FARA A OPERA«√O DE 2 NUMEROS ENTENDIDOS COMO\n");
+	printf(" A CALCULADORA S√ì FARA A OPERA√á√ÉO DE 2 NUMEROS ENTENDIDOS COMO\n");
 	printf(" O PRIMEIRO NUMERO (X) E O SEGUNDO (Y)\n\n");
 	printf("----------------------------------------------------------------------\n\n");
 	printf(" NO VALOR X AO DIGITAR O NUMERO (0) A CALCUADORA VOLTARA AO MENU \n");
-	printf(" INICIAL, ESSA FUN«√O SERA APLICADA A TODAS AS OPERA«’ES\n\n");
+	printf(" INICIAL, ESSA FUN√á√ÉO SERA APLICADA A TODAS AS OPERA√á√ïES\n\n");
 	printf("======================================================================\n");
 	printf("\n\n PORXIMO ->\n ");
 	system("pause");
@@ -266,10 +266,10 @@ do{
 	printf("======================================================================\n");
 	printf("                       - COMO USAR A CALCULADORA -\n");
 	printf("======================================================================\n");
-	printf("\n PARA A ULTILIZA«√O DE NUMEROS REAIS UTILIZE VIRGULA (,) PARA O \n");
+	printf("\n PARA A ULTILIZA√á√ÉO DE NUMEROS REAIS UTILIZE VIRGULA (,) PARA O \n");
 	printf(" VALOR APOS A VIRGUA SER REGISTRADO. \n\n");
 	printf("----------------------------------------------------------------------\n\n");
-	printf("NA DIVISAO N√O … POSSIVEL ULTILIZAR O ZERO (0) NO DENOMINADOR (Y)\n\n");
+	printf("NA DIVISAO N√ÉO √â POSSIVEL ULTILIZAR O ZERO (0) NO DENOMINADOR (Y)\n\n");
 	printf("======================================================================\n\n");
 	printf("PRESSIONE QUALQUER TECLA PARA VOLTAR AO MENU\n>> ");
 	scanf("%d", &opc);
@@ -283,13 +283,13 @@ do{
 	do
 	{
 		
-			printf("vers„o 1.0\n\n===================\n");
+			printf("vers√£o 1.0\n\n===================\n");
 			printf("     CALCUADORA\n");	
 			printf("-------------------\n");	
-		    printf("(0) CREDITOS\n(1) ADI«√O\n(2) SUBTRA«√O\n(3) MULTIPLICA«√O\n(4) DIVIS√O\n(5) INSTRU«’ES\n(6) SAIR\n");
+		    printf("(0) CREDITOS\n(1) ADI√á√ÉO\n(2) SUBTRA√á√ÉO\n(3) MULTIPLICA√á√ÉO\n(4) DIVIS√ÉO\n(5) INSTRU√á√ïES\n(6) SAIR\n");
 		    printf("===================\n\n");
 		    retorno = scanf("%d", &opc);		
-			do // repetiÁ„o para codigo invalido.
+			do // repeti√ß√£o para codigo invalido.
 			{
 				letra = getchar();
 			}while (letra != '\n');	
@@ -385,7 +385,7 @@ do{
 	       
 	    } while (retorno == 0);
 	        r = (x + y);
-	        printf("\n\nO valor È %.2f\n\n", r);
+	        printf("\n\nO valor √© %.2f\n\n", r);
 	        system("pause");
 	        system("cls");
 	        ad();
